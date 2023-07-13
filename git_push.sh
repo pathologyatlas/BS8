@@ -6,7 +6,7 @@ batch_size=2000
 total_items=${#items[@]}
 batches=$((($total_items + $batch_size - 1) / $batch_size))
 
-start_batch=25
+start_batch=38
 
 for ((i=$start_batch; i<$batches; i++))
 do
@@ -35,3 +35,5 @@ do
   echo "Batch number $((i+1)) has been processed."
   sleep 120
 done
+
+git status
